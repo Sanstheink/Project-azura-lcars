@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>USS AZURA — NCC-1626-G</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/lcars.css">
+<link rel="stylesheet" href="css/animations.css">
+</head>
+
+<body class="normal">
+
+<header class="topbar">
+  <div class="ship">
+    USS AZURA<br>
+    <span>NCC-1626-G</span>
+  </div>
+  <div id="alertText">CONDITION GREEN</div>
+</header>
+
+<nav class="sidebar">
+  <button onclick="go('bridge')">BRIDGE</button>
+  <button onclick="go('helm')">HELM</button>
+  <button onclick="go('engineering')">ENGINEERING</button>
+  <button onclick="go('science')">SCIENCE</button>
+</nav>
+
+<main>
+  <!-- BRIDGE -->
+  <section id="bridge" class="view active">
+    <h1>BRIDGE</h1>
+
+    <div class="grid">
+      <div class="panel">SICKBAY</div>
+      <div class="panel">ENGINEERING</div>
+      <div class="panel">SCIENCE LAB</div>
+      <div class="panel">BRIG</div>
+      <div class="panel">CREW QUARTERS</div>
+      <div class="panel">WEAPONS</div>
+      <div class="panel">COMMUNICATION</div>
+      <div class="panel">NAVIGATION</div>
+      <div class="panel">SECURITY</div>
+    </div>
+
+    <div class="alerts">
+      <button onclick="redAlert()">RED ALERT</button>
+      <button onclick="yellowAlert()">YELLOW ALERT</button>
+      <button onclick="blueAlert()">BLUE ALERT</button>
+      <button onclick="blackAlert()">BLACK ALERT</button>
+      <button onclick="proximityAlert()">PROXIMITY</button>
+    </div>
+  </section>
+
+  <!-- HELM -->
+  <section id="helm" class="view">
+    <h1>HELM</h1>
+    <div class="hud">
+      <div>SHIELDS <span>86%</span></div>
+      <div>HULL <span>93%</span></div>
+      <div>IMPULSE <span>ONLINE</span></div>
+      <div>WARP <span>STANDBY</span></div>
+    </div>
+  </section>
+
+  <!-- ENGINEERING -->
+  <section id="engineering" class="view">
+    <h1>ENGINEERING</h1>
+    <div class="core"></div>
+    <p>WARP CORE STABILITY: 99.7%</p>
+  </section>
+
+  <!-- SCIENCE -->
+  <section id="science" class="view">
+    <h1>SCIENCE</h1>
+    <div class="scanner"></div>
+    <p>Deep space scan running…</p>
+  </section>
+</main>
+
+<script src="js/router.js"></script>
+<script src="js/alerts.js"></script>
+<script src="js/idle.js"></script>
+<script src="js/app.js"></script>
+</body>
+                </html>
