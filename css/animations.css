@@ -1,0 +1,35 @@
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: none; }
+}
+
+.core {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: radial-gradient(circle, cyan, blue);
+  animation: pulse 1.8s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(.95); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(.95); }
+}
+
+.scanner {
+  width: 260px;
+  height: 260px;
+  border: 2px solid cyan;
+  border-radius: 50%;
+  animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+body.red { background: #220000; }
+body.yellow { background: #221a00; }
+body.blue { background: #001522; }
+body.black { background: #000; }
